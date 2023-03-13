@@ -5,6 +5,7 @@ using System.Threading;
 using System.Windows.Media.Animation;
 using System.IO;
 using System.Windows.Media;
+using System.Diagnostics;
 
 namespace MediaHome.WPF
 {
@@ -134,7 +135,6 @@ namespace MediaHome.WPF
             DisableMainMenuButtons();
         }
 
-
         void btnMainMenuAllFadeInAnimationStoryboard_Completed(object sender, EventArgs e)
         {
             btnFadeInStoryboard.Stop();
@@ -161,7 +161,9 @@ namespace MediaHome.WPF
                 case "btnYoutube":
                     //brdWeb.Visibility = Visibility.Visible;
                     //StartWeb.Navigate("https://m.youtube.com/index?app=m");
-                    StartWeb.Navigate("https://tw.yahoo.com/");
+
+                    LaunchYoutube();
+
                     break;
             }
         }
@@ -182,5 +184,13 @@ namespace MediaHome.WPF
         }
 
 
+        void LaunchYoutube()
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = @"C:\Program Files\Google\Chrome\Application\Chrome.exe";
+
+            process.StartInfo.Arguments = "--kiosk --app=m.youtube.com/index?app=m";
+            process.Start();
+        }
     }
 }

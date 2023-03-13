@@ -20,7 +20,6 @@ namespace MediaHome
     /// </summary>
     public partial class MainWindow : Window
     {
-
         public MainWindow()
         {
             InitializeComponent();
@@ -112,6 +111,5 @@ namespace MediaHome
                 mainMenu.brdYiutube.BorderThickness = thicknessZero;
             }
         }
-
     }
 }
