@@ -28,19 +28,14 @@ namespace MediaHome.WPF
             set { selectedButton = value; }
         }
 
-        public MediaPlayer mediaPlayer;
+        private MediaPlayer mediaPlayer;
 
         public MainMenu()
         {
             InitializeComponent();
 
-            btnBuild.Content = "Print";
-            btnMaintenance.Content = "Maintenance";
-            btnSettings.Content = "Settings";
-
-
             mediaPlayer = new MediaPlayer();
-            mediaPlayer.Open(new Uri("SLS_panel_bg_loop_video.wmv", UriKind.Relative)); // Buildware Ver ~1.1.3: SLS_panel_bg_loop_video.mp4
+            mediaPlayer.Open(new Uri("BackgroundVideo.mp4", UriKind.Relative)); // backgroundvideo.mp4 comes from https://www.pexels.com/search/videos/background/, Pexels Videos 1851190.mp4.
             mediaPlayer.MediaEnded += mediaPlayer_MediaEnded;
             mediaPlayer.ScrubbingEnabled = true;
             VideoDrawing drawing = new VideoDrawing();
@@ -95,16 +90,10 @@ namespace MediaHome.WPF
 
         public void DisableMainMenuButtons()
         {
-            btnBuild.IsEnabled = false;
-            btnMaintenance.IsEnabled = false;
-            btnSettings.IsEnabled = false;
         }
 
         public void EnableMainMenuButtons()
         {
-            btnBuild.IsEnabled = true;
-            btnMaintenance.IsEnabled = true;
-            btnSettings.IsEnabled = true;
         }
         //<><><>
 
@@ -186,6 +175,21 @@ namespace MediaHome.WPF
         void btnSettingsFadeOutAnimationStoryboard_Completed(object sender, EventArgs e)
         {
             btnSettingsFadeOutStoryboard.Stop();
+        }
+
+        private void btnNetflix_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDisneyplus_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnYoutube_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

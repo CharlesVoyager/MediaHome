@@ -118,9 +118,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\btn-maintenance2.png" />
-    <Resource Include="Resources\btn-print2.png" />
-    <Resource Include="Resources\btn-settings2.png" />
+    <Resource Include="Resources\btn-DisneyPlus.png" />
+    <Resource Include="Resources\btn-Netflix.png" />
+    <Resource Include="Resources\btn-Youtube.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
