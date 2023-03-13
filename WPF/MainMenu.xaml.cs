@@ -40,11 +40,11 @@ namespace MediaHome.WPF
             mediaPlayer.MediaEnded += mediaPlayer_MediaEnded;
             mediaPlayer.ScrubbingEnabled = true;
             VideoDrawing drawing = new VideoDrawing();
-            drawing.Rect = new Rect(0, 0, 600, 800);
+            drawing.Rect = new Rect(0, 0, 600, 1200);
             drawing.Player = mediaPlayer;
             mediaPlayer.Play();
             DrawingBrush brush = new DrawingBrush(drawing);
-            this.Background = brush;
+            Background = brush;
         }
 
         private void mediaPlayer_MediaEnded(object sender, EventArgs e)

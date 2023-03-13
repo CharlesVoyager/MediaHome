@@ -9,21 +9,21 @@
              d:DesignHeight="600" d:DesignWidth="1200" Background="Transparent">
     <UserControl.Resources>
         <FontFamily x:Key="RobotoBlack">/Resources/fonts/Roboto-Black.ttf#Roboto Bk</FontFamily>
-        <FontFamily x:Key="RobotoBlackItalic">/Resources/Assets/assets_fonts/Roboto/Roboto-BlackItalic.ttf#Roboto Bk</FontFamily>
-        <FontFamily x:Key="RobotoBold">/Resources/Assets/assets_fonts/Roboto/Roboto-Bold.ttf#Roboto</FontFamily>
-        <FontFamily x:Key="RobotoBoldCondensed">/Resources/Assets/assets_fonts/Roboto/Roboto-BoldCondensed.ttf#Roboto Cn</FontFamily>
-        <FontFamily x:Key="RobotoBoldCondensedItalic">/Resources/Assets/assets_fonts/Roboto/Roboto-BoldCondensedItalic.ttf#Roboto Cn</FontFamily>
-        <FontFamily x:Key="RobotoBoldItalic">/Resources/Assets/assets_fonts/Roboto/Roboto-BoldItalic.ttf#Roboto</FontFamily>
-        <FontFamily x:Key="RobotoCondensed">/Resources/Assets/assets_fonts/Roboto/Roboto-Condensed.ttf#Roboto Cn</FontFamily>
-        <FontFamily x:Key="RobotoCondensedItalic">/Resources/Assets/assets_fonts/Roboto/Roboto-CondensedItalic.ttf#Roboto Cn</FontFamily>
-        <FontFamily x:Key="RobotoItalic">/Resources/Assets/assets_fonts/Roboto/Roboto-Italic.ttf#Roboto</FontFamily>
-        <FontFamily x:Key="RobotoLight">/Resources/Assets/assets_fonts/Roboto/Roboto-Light.ttf#Roboto Lt</FontFamily>
-        <FontFamily x:Key="RobotoLightItalic">/Resources/Assets/assets_fonts/Roboto/Roboto-LightItalic.ttf#Roboto Lt</FontFamily>
-        <FontFamily x:Key="RobotoMedium">/Resources/Assets/assets_fonts/Roboto/Roboto-Medium.ttf#Roboto Lt</FontFamily>
-        <FontFamily x:Key="RobotoMediumItalic">/Resources/Assets/assets_fonts/Roboto/Roboto-MediumItalic.ttf#Roboto Lt</FontFamily>
-        <FontFamily x:Key="RobotoRegular">/Resources/Assets/assets_fonts/Roboto/Roboto-Regular.ttf#Roboto</FontFamily>
-        <FontFamily x:Key="RobotoThin">/Resources/Assets/assets_fonts/Roboto/Roboto-Thin.ttf#Roboto Th</FontFamily>
-        <FontFamily x:Key="RobotoThinItalic">/Resources/Assets/assets_fonts/Roboto/Roboto-ThinItalic.ttf#Roboto Th</FontFamily>
+        <FontFamily x:Key="RobotoBlackItalic">/Resources/fonts/Roboto-BlackItalic.ttf#Roboto Bk</FontFamily>
+        <FontFamily x:Key="RobotoBold">/Resources/fonts/Roboto-Bold.ttf#Roboto</FontFamily>
+        <FontFamily x:Key="RobotoBoldCondensed">/Resources/fonts/Roboto-BoldCondensed.ttf#Roboto Cn</FontFamily>
+        <FontFamily x:Key="RobotoBoldCondensedItalic">/Resources/fonts/Roboto-BoldCondensedItalic.ttf#Roboto Cn</FontFamily>
+        <FontFamily x:Key="RobotoBoldItalic">/Resources/fonts/Roboto-BoldItalic.ttf#Roboto</FontFamily>
+        <FontFamily x:Key="RobotoCondensed">/Resourcesfonts/Roboto-Condensed.ttf#Roboto Cn</FontFamily>
+        <FontFamily x:Key="RobotoCondensedItalic">/Resources/fonts/Roboto-CondensedItalic.ttf#Roboto Cn</FontFamily>
+        <FontFamily x:Key="RobotoItalic">/Resources/fonts/Roboto-Italic.ttf#Roboto</FontFamily>
+        <FontFamily x:Key="RobotoLight">/Resources/fonts/Roboto-Light.ttf#Roboto Lt</FontFamily>
+        <FontFamily x:Key="RobotoLightItalic">/Resources/fonts/Roboto-LightItalic.ttf#Roboto Lt</FontFamily>
+        <FontFamily x:Key="RobotoMedium">/Resources/fonts/Roboto-Medium.ttf#Roboto Lt</FontFamily>
+        <FontFamily x:Key="RobotoMediumItalic">/Resources/fonts/Roboto-MediumItalic.ttf#Roboto Lt</FontFamily>
+        <FontFamily x:Key="RobotoRegular">/Resources/fonts/Roboto-Regular.ttf#Roboto</FontFamily>
+        <FontFamily x:Key="RobotoThin">/Resources/fonts/Roboto-Thin.ttf#Roboto Th</FontFamily>
+        <FontFamily x:Key="RobotoThinItalic">/Resources/fonts/Roboto-ThinItalic.ttf#Roboto Th</FontFamily>
 
         <Storyboard x:Key="ButtonMainMenuAllFadeIn" Duration="0:0:0.6">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="btnBuild">
