@@ -7,6 +7,7 @@
              xmlns:WebForms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1200" Background="Transparent">
+    
     <UserControl.Resources>
         <FontFamily x:Key="RobotoBlack">/Resources/fonts/Roboto-Black.ttf#Roboto Bk</FontFamily>
         <FontFamily x:Key="RobotoBlackItalic">/Resources/fonts/Roboto-BlackItalic.ttf#Roboto Bk</FontFamily>
@@ -25,68 +26,6 @@
         <FontFamily x:Key="RobotoThin">/Resources/fonts/Roboto-Thin.ttf#Roboto Th</FontFamily>
         <FontFamily x:Key="RobotoThinItalic">/Resources/fonts/Roboto-ThinItalic.ttf#Roboto Th</FontFamily>
 
-        <Storyboard x:Key="ButtonMainMenuAllFadeIn" Duration="0:0:0.6">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="btnBuild">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="btnMaintenance">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="btnSettings">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnBuild">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="btnBuild">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnMaintenance">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="btnMaintenance">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnSettings">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="btnSettings">
-                <SplineDoubleKeyFrame KeyTime="0" Value="0"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnBuild">
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="btnBuild">
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnMaintenance">
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="btnMaintenance">
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnSettings">
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="btnSettings">
-                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.2"/>
-                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
         <Storyboard x:Key="ButtonGrow" Completed="btnGrowAnimationStoryboard_Completed" Duration="0:0:0.3">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="{Binding Path=SelectedButton, UpdateSourceTrigger=PropertyChanged}">
                 <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1.5"/>
@@ -168,9 +107,7 @@
                 </Button.RenderTransform>
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
-
-                    <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="/MediaHome;component/Resources/btn-Netflix.png" Stretch="Fill"/>
-                            
+                    <Image Source="/MediaHome;component/Resources/btn-Netflix.png" Stretch="Fill"/>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
@@ -187,9 +124,7 @@
                 </Button.RenderTransform>
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
-
-                        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="/MediaHome;component/Resources/btn-DisneyPlus.png" Stretch="Fill"/>
-                           
+                        <Image Source="/MediaHome;component/Resources/btn-DisneyPlus.png" Stretch="Fill"/>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
@@ -206,9 +141,7 @@
                 </Button.RenderTransform>
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
-
                         <Image Source="/MediaHome;component/Resources/btn-Youtube.png" Stretch="Fill"/>
-         
                     </ControlTemplate>
                 </Button.Template>
             </Button>
@@ -221,16 +154,5 @@
                 </WindowsFormsHost>
             </Grid>
         </Border>
-
-        <Grid Grid.Row="2" Grid.Column="2" >
-           <Grid.RowDefinitions>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-            </Grid.ColumnDefinitions>
-            <TextBlock x:Name="txtPrinterName" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Text="MP236xS-1234567" VerticalAlignment="Center" Foreground="White" FontFamily="{StaticResource RobotoLight}" FontSize="18" Margin="-15" Visibility="Hidden"></TextBlock>
-            <TextBlock x:Name="txtSystemVersion" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Text="System Version 1.1.1" VerticalAlignment="Center"  Foreground="White" FontFamily="{StaticResource RobotoLight}" FontSize="18" Margin="-15" Visibility="Hidden"></TextBlock>
-        </Grid>
     </Grid>
 </UserControl>

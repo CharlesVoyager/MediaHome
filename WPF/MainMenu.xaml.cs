@@ -150,20 +150,15 @@ namespace MediaHome.WPF
             switch (SelectedButton)
             {
                 case "btnNetflix":
-                    //brdWeb.Visibility = Visibility.Visible;
-                    //StartWeb.Navigate("https://www.netflix.com/tw-en/");
+                    LaunchNetflix();
                     break;
 
                 case "btnDisneyPlus":
-
+                    LaunchDisneyPlus();
                     break;
 
                 case "btnYoutube":
-                    //brdWeb.Visibility = Visibility.Visible;
-                    //StartWeb.Navigate("https://m.youtube.com/index?app=m");
-
                     LaunchYoutube();
-
                     break;
             }
         }
@@ -183,13 +178,30 @@ namespace MediaHome.WPF
             btnYoutubeFadeOutStoryboard.Stop();
         }
 
+        void LaunchNetflix()
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = @"C:\Program Files\Google\Chrome\Application\Chrome.exe";
+            //process.StartInfo.Arguments = "--kiosk --app=m.youtube.com/index?app=m";
+            process.StartInfo.Arguments = "https://www.netflix.com/browse";
+            process.Start();
+        }
+
+        void LaunchDisneyPlus()
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = @"C:\Program Files\Google\Chrome\Application\Chrome.exe";
+            //process.StartInfo.Arguments = "--kiosk --app=m.youtube.com/index?app=m";
+            process.StartInfo.Arguments = "https://www.disneyplus.com/";
+            process.Start();
+        }
 
         void LaunchYoutube()
         {
             Process process = new Process();
             process.StartInfo.FileName = @"C:\Program Files\Google\Chrome\Application\Chrome.exe";
-
-            process.StartInfo.Arguments = "--kiosk --app=m.youtube.com/index?app=m";
+            //process.StartInfo.Arguments = "--kiosk --app=m.youtube.com/index?app=m";
+            process.StartInfo.Arguments = "https://m.youtube.com/index?app=m";
             process.Start();
         }
     }
