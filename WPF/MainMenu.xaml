@@ -102,20 +102,23 @@
                 <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Key="ButtonBuildFadeOut" Completed="btnBuildFadeOutAnimationStoryboard_Completed" Duration="0:0:0.3">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="btnBuild">
+
+        <Storyboard x:Key="ButtonNetflixFadeOut" Completed="btnNetflixFadeOutAnimationStoryboard_Completed" Duration="0:0:0.3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="btnNetflix">
                 <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
                 <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Key="ButtonMaintenanceFadeOut" Completed="btnMaintenanceFadeOutAnimationStoryboard_Completed" Duration="0:0:0.3">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="btnMaintenance">
+        
+        <Storyboard x:Key="ButtonDisneyPlusFadeOut" Completed="btnDisneyPlusFadeOutAnimationStoryboard_Completed" Duration="0:0:0.3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="btnDisneyPlus">
                 <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
                 <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Key="ButtonSettingsFadeOut" Completed="btnSettingsFadeOutAnimationStoryboard_Completed" Duration="0:0:0.3">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="btnSettings">
+
+        <Storyboard x:Key="ButtonYoutubeFadeOut" Completed="btnYoutubeFadeOutAnimationStoryboard_Completed" Duration="0:0:0.3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="btnYoutube">
                 <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
                 <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
@@ -142,9 +145,9 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="172"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
             <RowDefinition Height="330"></RowDefinition>
-            <RowDefinition Height="102"></RowDefinition>
+            <RowDefinition Height="135"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -172,7 +175,7 @@
             </Button>
         </Border>
         <Border Grid.Row="1" Grid.Column="1" Margin="0" BorderThickness="0" HorizontalAlignment="Center">
-            <Button x:Name="btnDisneyplus" HorizontalAlignment="Center" Click="btnDisneyplus_Click" RenderTransformOrigin="0.5,0.5" SnapsToDevicePixels="True">
+            <Button x:Name="btnDisneyPlus" HorizontalAlignment="Center" Click="btnDisneyPlus_Click" RenderTransformOrigin="0.5,0.5" SnapsToDevicePixels="True">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -184,7 +187,7 @@
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
 
-                        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="/MediaHome;component/Resources/btn-Disneyplus.png" Stretch="Fill"/>
+                        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="/MediaHome;component/Resources/btn-DisneyPlus.png" Stretch="Fill"/>
                            
                     </ControlTemplate>
                 </Button.Template>

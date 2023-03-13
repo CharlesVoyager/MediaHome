@@ -17,9 +17,9 @@ namespace MediaHome.WPF
 
         Storyboard btnGrowStoryboard;
         Storyboard btnFadeInStoryboard;
-        Storyboard btnBuildFadeOutStoryboard;
-        Storyboard btnMaintenanceFadeOutStoryboard;
-        Storyboard btnSettingsFadeOutStoryboard;
+        Storyboard btnNetflixFadeOutStoryboard;
+        Storyboard btnDisneyPlusFadeOutStoryboard;
+        Storyboard btnYoutubeFadeOutStoryboard;
 
         private string selectedButton;
         public string SelectedButton
@@ -70,22 +70,22 @@ namespace MediaHome.WPF
             btnGrowStoryboard.Begin();
         }
 
-        public void AnimateButtonBuildFadeOut()
+        public void AnimateButtonNetflixFadeOut()
         {
-            btnBuildFadeOutStoryboard = FindResource("ButtonBuildFadeOut") as Storyboard;
-            btnBuildFadeOutStoryboard.Begin();
+            btnNetflixFadeOutStoryboard = FindResource("ButtonNetflixFadeOut") as Storyboard;
+            btnNetflixFadeOutStoryboard.Begin();
         }
 
-        public void AnimateButtonMaintenanceFadeOut()
+        public void AnimateButtonDisneyPlusFadeOut()
         {
-            btnMaintenanceFadeOutStoryboard = FindResource("ButtonMaintenanceFadeOut") as Storyboard;
-            btnMaintenanceFadeOutStoryboard.Begin();
+            btnDisneyPlusFadeOutStoryboard = FindResource("ButtonDisneyPlusFadeOut") as Storyboard;
+            btnDisneyPlusFadeOutStoryboard.Begin();
         }
 
-        public void AnimateButtonSettingsFadeOut()
+        public void AnimateButtonYoutubeFadeOut()
         {
-            btnSettingsFadeOutStoryboard = FindResource("ButtonSettingsFadeOut") as Storyboard;
-            btnSettingsFadeOutStoryboard.Begin();
+            btnYoutubeFadeOutStoryboard = FindResource("ButtonYoutubeFadeOut") as Storyboard;
+            btnYoutubeFadeOutStoryboard.Begin();
         }
 
         public void DisableMainMenuButtons()
@@ -97,42 +97,43 @@ namespace MediaHome.WPF
         }
         //<><><>
 
-        private void btnMaintenance_Click(object sender, RoutedEventArgs e)
+   
+        private void btnNetflix_Click(object sender, RoutedEventArgs e)
         {
             Button selected = sender as Button;
             selectedButton = selected.Name;
 
-            AnimateButtonBuildFadeOut();
-            AnimateButtonSettingsFadeOut();
+            AnimateButtonDisneyPlusFadeOut();
+            AnimateButtonYoutubeFadeOut();
 
             AnimateButtonGrow();
             DisableMainMenuButtons();
         }
 
-        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        private void btnDisneyPlus_Click(object sender, RoutedEventArgs e)
         {
             Button selected = sender as Button;
             selectedButton = selected.Name;
 
-            AnimateButtonBuildFadeOut();
-            AnimateButtonMaintenanceFadeOut();
+            AnimateButtonNetflixFadeOut();
+            AnimateButtonYoutubeFadeOut();
 
             AnimateButtonGrow();
             DisableMainMenuButtons();
         }
 
-        // MainMenu: Print button
-        private void btn_Build_Click(object sender, RoutedEventArgs e)
+        private void btnYoutube_Click(object sender, RoutedEventArgs e)
         {
             Button selected = sender as Button;
             selectedButton = selected.Name;
 
-            AnimateButtonMaintenanceFadeOut();
-            AnimateButtonSettingsFadeOut();
+            AnimateButtonNetflixFadeOut();
+            AnimateButtonDisneyPlusFadeOut();
 
             AnimateButtonGrow();
             DisableMainMenuButtons();
         }
+
 
         void btnMainMenuAllFadeInAnimationStoryboard_Completed(object sender, EventArgs e)
         {
@@ -142,54 +143,41 @@ namespace MediaHome.WPF
         void btnGrowAnimationStoryboard_Completed(object sender, EventArgs e)
         {
             btnGrowStoryboard.Stop();
-            AnimateButtonBuildFadeOut();
-            AnimateButtonMaintenanceFadeOut();
-            AnimateButtonSettingsFadeOut();
+            AnimateButtonNetflixFadeOut();
+            AnimateButtonDisneyPlusFadeOut();
+            AnimateButtonYoutubeFadeOut();
 
             switch (SelectedButton)
             {
-                case "btnBuild":    //Print
-
-                    break;
-                case "btnMaintenance":
-
+                case "btnNetflix":  
 
                     break;
 
-                case "btnSettings":
+                case "btnDisneyPlus":
+
+                    break;
+
+                case "btnYoutube":
 
                     break;
             }
         }
 
-        void btnBuildFadeOutAnimationStoryboard_Completed(object sender, EventArgs e)
+        private void btnNetflixFadeOutAnimationStoryboard_Completed(object sender, EventArgs e)
         {
-            btnBuildFadeOutStoryboard.Stop();
+            btnNetflixFadeOutStoryboard.Stop();
         }
 
-        void btnMaintenanceFadeOutAnimationStoryboard_Completed(object sender, EventArgs e)
+        private void btnDisneyPlusFadeOutAnimationStoryboard_Completed(object sender, EventArgs e)
         {
-            btnMaintenanceFadeOutStoryboard.Stop();
+            btnDisneyPlusFadeOutStoryboard.Stop();
         }
 
-        void btnSettingsFadeOutAnimationStoryboard_Completed(object sender, EventArgs e)
+        void btnYoutubeFadeOutAnimationStoryboard_Completed(object sender, EventArgs e)
         {
-            btnSettingsFadeOutStoryboard.Stop();
+            btnYoutubeFadeOutStoryboard.Stop();
         }
 
-        private void btnNetflix_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
-
-        private void btnDisneyplus_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnYoutube_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
