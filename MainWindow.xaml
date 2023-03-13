@@ -5,12 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediaHome.WPF"
         mc:Ignorable="d"
-        Title="Media Home v1.0 by Charles Chang" Height="600" Width="800">
+        Title="Media Home v1.0 by Charles Chang" Height="600" Width="800" PreviewKeyDown="MainWindow_PreviewKeyDown">
    
     <Grid>
-        
-            
-        
+
         <local:MainMenu x:Name="mainMenu" Grid.Row="0" Grid.Column="0" Visibility="Visible"/>
         
     </Grid>

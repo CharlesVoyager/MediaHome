@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MediaHome.WPF"
+             xmlns:WebForms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1200" Background="Transparent">
     <UserControl.Resources>
@@ -155,7 +156,7 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Row="1" Grid.Column="0" Margin="0" BorderThickness="0" HorizontalAlignment="Center">
+        <Border x:Name="brdNetflix" Grid.Row="1" Grid.Column="0" BorderThickness="0" BorderBrush="Yellow" HorizontalAlignment="Center">
             <Button x:Name="btnNetflix"  ContentStringFormat="Print" HorizontalAlignment="Center" Click="btnNetflix_Click" RenderTransformOrigin="0.5,0.5" SnapsToDevicePixels="True">
                 <Button.RenderTransform>
                     <TransformGroup>
@@ -174,7 +175,7 @@
                 </Button.Template>
             </Button>
         </Border>
-        <Border Grid.Row="1" Grid.Column="1" Margin="0" BorderThickness="0" HorizontalAlignment="Center">
+        <Border x:Name="brdDisneyPlus" Grid.Row="1" Grid.Column="1" Margin="0" BorderThickness="0" BorderBrush="Yellow" HorizontalAlignment="Center">
             <Button x:Name="btnDisneyPlus" HorizontalAlignment="Center" Click="btnDisneyPlus_Click" RenderTransformOrigin="0.5,0.5" SnapsToDevicePixels="True">
                 <Button.RenderTransform>
                     <TransformGroup>
@@ -193,7 +194,7 @@
                 </Button.Template>
             </Button>
         </Border>
-        <Border Grid.Row="1" Grid.Column="2" BorderThickness="0" HorizontalAlignment="Center">
+        <Border x:Name="brdYiutube" Grid.Row="1" Grid.Column="2" BorderThickness="0" BorderBrush="Yellow" HorizontalAlignment="Center">
             <Button x:Name="btnYoutube" HorizontalAlignment="Center" Click="btnYoutube_Click" RenderTransformOrigin="0.5,0.5" SnapsToDevicePixels="True">
                 <Button.RenderTransform>
                     <TransformGroup>
@@ -213,8 +214,15 @@
             </Button>
         </Border>
 
+        <Border x:Name="brdWeb" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="3" BorderThickness="0" Visibility="Hidden" >
+            <Grid>
+                <WindowsFormsHost x:Name="WebHost">
+                    <WebForms:WebBrowser x:Name="StartWeb" ScriptErrorsSuppressed="True"/>
+                </WindowsFormsHost>
+            </Grid>
+        </Border>
 
-        <Grid Grid.Row="2" Grid.Column="2">
+        <Grid Grid.Row="2" Grid.Column="2" >
            <Grid.RowDefinitions>
                 <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>

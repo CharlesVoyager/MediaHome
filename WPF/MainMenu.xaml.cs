@@ -149,8 +149,9 @@ namespace MediaHome.WPF
 
             switch (SelectedButton)
             {
-                case "btnNetflix":  
-
+                case "btnNetflix":
+                    //brdWeb.Visibility = Visibility.Visible;
+                    //StartWeb.Navigate("https://www.netflix.com/tw-en/");
                     break;
 
                 case "btnDisneyPlus":
@@ -158,7 +159,9 @@ namespace MediaHome.WPF
                     break;
 
                 case "btnYoutube":
-
+                    //brdWeb.Visibility = Visibility.Visible;
+                    //StartWeb.Navigate("https://m.youtube.com/index?app=m");
+                    StartWeb.Navigate("https://tw.yahoo.com/");
                     break;
             }
         }
