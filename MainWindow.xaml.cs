@@ -20,15 +20,26 @@ namespace MediaHome
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        Thickness thicknessFocus;
+        Thickness thicknessZero;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            Thickness thicknessFocus = new Thickness();
+            thicknessFocus = new Thickness();
             thicknessFocus.Bottom = 3;
             thicknessFocus.Left = 3;
             thicknessFocus.Right = 3;
             thicknessFocus.Top = 3;
+
+            thicknessZero = new Thickness();
+            thicknessZero.Bottom = 0;
+            thicknessZero.Left = 0;
+            thicknessZero.Right = 0;
+            thicknessZero.Top = 0;
+
             mainMenu.brdNetflix.BorderThickness = thicknessFocus;
         }
 
@@ -52,18 +63,6 @@ namespace MediaHome
 
         private void processRightKey()
         {
-            Thickness thicknessFocus = new Thickness();
-            thicknessFocus.Bottom = 3;
-            thicknessFocus.Left = 3;
-            thicknessFocus.Right = 3;
-            thicknessFocus.Top = 3;
-
-            Thickness thicknessZero = new Thickness();
-            thicknessZero.Bottom = 0;
-            thicknessZero.Left = 0;
-            thicknessZero.Right = 0;
-            thicknessZero.Top = 0;
-
             if (mainMenu.brdNetflix.BorderThickness.Left > 0)
             {
                 mainMenu.brdNetflix.BorderThickness = thicknessZero;
@@ -83,18 +82,6 @@ namespace MediaHome
 
         private void processLeftKey()
         {
-            Thickness thicknessFocus = new Thickness();
-            thicknessFocus.Bottom = 3;
-            thicknessFocus.Left = 3;
-            thicknessFocus.Right = 3;
-            thicknessFocus.Top = 3;
-
-            Thickness thicknessZero = new Thickness();
-            thicknessZero.Bottom = 0;
-            thicknessZero.Left = 0;
-            thicknessZero.Right = 0;
-            thicknessZero.Top = 0;
-
             if (mainMenu.brdNetflix.BorderThickness.Left > 0)
             {
                 return;
@@ -106,7 +93,6 @@ namespace MediaHome
             }
             else if (mainMenu.brdYiutube.BorderThickness.Left > 0)
             {
-
                 mainMenu.brdDisneyPlus.BorderThickness = thicknessFocus;
                 mainMenu.brdYiutube.BorderThickness = thicknessZero;
             }
